@@ -24,29 +24,58 @@ math: false
 通过邀请链接注册：<https://nic.ua/en/signup/voavephe>
 
 1. 用邮箱 + 密码注册，去邮箱点开 "Welcome to NIC.UA" 邮件完成验证。
+
+   ![邀请注册页：填写 E-mail、Password，含 I have an invitation code（走邀请链接）](/img/tech/ppua-1.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
 2. 回到 <https://nic.ua/> 首页搜索框输入想要的域名（如 `myname.pp.ua`），点 **Search** 查是否可用。
+
+   ![域名搜索结果：绿色勾 + available for registration，加入购物车后点 Checkout（Is free）](/img/tech/ppua-2.png)
+   > 图片来源：https://blog.51sec.org/2021/02/free-subdomain-from-ppua-and.html
 3. 未被占用会出现绿色勾和 **Add to cart**，加入购物车后点 **Checkout** 去结算（免费，无需付款）。
 4. 填写域名联系人信息（Contact）：
    - **电话务必填 Telegram 绑定的那个手机号**，填错将无法激活且难改；
    - 国家选 China，姓名/地址用大写拼音即可，邮箱务必正确。
    - 点 **Save contact** 保存。
+
+   ![填写联系人界面（Private information of the account owner）：Phone number 务必填 Telegram 绑定的手机号](/img/tech/ppua-3.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
 5. 到 **Payment Cards** 添加一张 VISA 卡，会提示扣 1.00₴ 预授权（实测多不真扣），完成卡片验证。
+
+   ![Payment Cards 绑 VISA 卡界面：左侧 Payment cards 入口，Add card 按钮（暂无卡片状态）](/img/tech/ppua-4.png)
+   > 图片来源：https://nic.ua/en/knowledge-base/how-to-add-a-payment-card
 6. 回到首页重新搜索该域名 → 加入购物车 → 结账，域名才会进入你的管理后台（否则仍会提示"需绑卡"）。
 
 ## 如何激活域名
 
 1. Telegram 搜索 **@ppuabot**，发送 `/start`。
+
+   ![Telegram @ppuabot /start：要求 Send phone number（按提示分享 Telegram 绑定的手机号）](/img/tech/ppua-5.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
 2. 点 **Activate domain** 按钮，按提示输入刚申请的域名，再确认 `yes`。
+
+   ![@ppuabot 激活对话：输入域名 → 同意 PP.UA 政策 → Yes，机器人返回激活地址 https://apu.drs.ua](/img/tech/ppua-6.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
 3. 机器人会返回一串**激活码**和激活地址。
 4. 打开 <https://apu.drs.ua> → 填入域名、TG 绑定的电话、激活码 → 激活成功。
+
+   ![apu.drs.ua 激活页：Domain / Phone number / Key + Continue（输入激活码完成激活）](/img/tech/ppua-7.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
    （也可在 https://pp.ua 用短信收到的域码激活，但 TG 方式更稳。）
 
 ## 如何配置 DNS / 指向自己的站点
 
 `.pp.ua` 支持自定义 NS，可托管到 Cloudflare：
 
+![NIC.UA 后台 Domains 域名列表（从这里进入单个域名的 NS 设置）](/img/tech/ppua-8.png)
+> 图片来源：https://blog.51sec.org/2021/02/free-subdomain-from-ppua-and.html
 1. Cloudflare → **添加站点** → 输入完整域名 `myname.pp.ua` → Free 计划。
+
+   ![Cloudflare 名称服务器配置页：将当前 NS 替换为 Cloudflare 分配的两个名称服务器（piper/pranab.ns.cloudflare.com），删除旧 NS，保存并继续](/img/tech/ppua-9.png)
+   > 图片来源：https://blog.zrf.me/p/notes-pp-ua/
 2. 复制 Cloudflare 分配的两个 NS，回 NIC.UA 后台把域名的 Name Server 改成这两个 → 保存。
+
+   ![NIC.UA 后台改 NS：单域名详情页 NS-servers → Custom name servers，填入 Cloudflare 的两个 NS（megan/armando.ns.cloudflare.com）](/img/tech/ppua-10.png)
+   > 图片来源：https://blog.51sec.org/2021/02/free-subdomain-from-ppua-and.html
 3. Cloudflare 侧检查 NS，变 **Active** 即托管完成，SSL 自动签发。
 4. 添加记录：CNAME `@` → `yourname.github.io`（GitHub Pages 自定义域 + Enforce HTTPS）；或 A `@` → 服务器 IP。非 HTTP 服务记得把云朵点灰。
 

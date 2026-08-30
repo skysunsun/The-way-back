@@ -23,11 +23,29 @@ math: false
 通过邀请链接注册可直接进入注册页：<https://dash.domain.digitalplat.org/signup?ref=vUKq088Qwp>
 
 1. 填写用户名、邮箱、姓名、电话、地址、密码并提交。
+
+   ![DigitalPlat 邀请注册页（填写用户名、邮箱、密码等）](/img/tech/digitalplat-1.png)
+   > 图片来源：https://blog.csdn.net/WuYaowk/article/details/160193247
+
 2. 去邮箱点开验证链接，出现 `Successful` 即邮箱验证成功。
 3. 登录 <https://dash.domain.digitalplat.org/>，在 KYC 界面选 **Sign in with GitHub** 授权，显示 `Successful` 即验证通过。
+
+   ![GitHub KYC 授权成功提示](/img/tech/digitalplat-2.png)
+   > 图片来源：https://syjx.dpdns.org/posts/52166/
+
 4. （可选）默认 1 个额度。点后台链接去 GitHub 给 FreeDomain 项目点 ⭐ Star，返回 Verify 可 +1 额度。
 5. 左侧 **Domain Registration** → 后缀选 `.qzz.io` 或 `.dpdns.org` → 输入前缀（如 `myblog`，即 `myblog.qzz.io` / `myblog.dpdns.org`）→ Check availability。
+
+   ![Domain Registration 选择后缀并检查可用性](/img/tech/digitalplat-3.png)
+   > 图片来源：https://blog.csdn.net/WuYaowk/article/details/160193247
+
 6. 显示绿色可用提示后，随便填两个 Name Server（之后能改），点 **Register** 即注册成功。
+
+   ![域名可用提示](/img/tech/digitalplat-4.png)
+   > 图片来源：https://www.cnblogs.com/jsonhc/p/19631511
+
+   ![注册成功后的 My Domains 列表](/img/tech/digitalplat-5.png)
+   > 图片来源：https://www.cnblogs.com/jsonhc/p/19631511
 
 ## 如何配置 DNS / 指向自己的站点
 
@@ -36,6 +54,10 @@ math: false
 1. 登录 Cloudflare → **添加站点** → 输入完整域名 → 选 Free 计划。
 2. 复制 Cloudflare 分配的两个 NS（如 `aaa.ns.cloudflare.com` / `bbb.ns.cloudflare.com`）。
 3. 回 DigitalPlat 后台 **My Domains** → 点域名 → 把 NS 填进 Name Server 1 / 2 → 保存。
+
+   ![在 DigitalPlat 域名管理中填写 Cloudflare NS](/img/tech/digitalplat-6.png)
+   > 图片来源：https://www.cnblogs.com/jsonhc/p/19631511
+
 4. Cloudflare 侧点「检查名称服务器」，变 **Active** 即托管完成，SSL 自动签发。
 5. 添加记录：CNAME `@` → `yourname.github.io`（同时仓库 Settings → Pages 填自定义域，开启 Enforce HTTPS）；普通服务器用 A `@` → 服务器 IP。非 HTTP 服务（SSH、游戏服）记得把橙色云朵点灰。
 
