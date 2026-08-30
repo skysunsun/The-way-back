@@ -58,8 +58,9 @@ math: false          # 需要数学公式（KaTeX）时设 true，会自动加�
    git push -u origin main
    ```
 
-3. 仓库 **Settings → Pages → Build and deployment → Source 选 "GitHub Actions"**。
-4. 等 Actions 跑完（约 1 分钟），访问 `https://你的用户名.github.io/blog/`。
+3. 仓库 **Settings → Pages → Build and deployment → Source 选 "Deploy from a branch"**，
+   分支选 **`gh-pages`**、目录选 **`/ (root)`**，保存。
+4. 等 Actions 跑完（约 1 分钟），访问 `https://你的用户名.github.io/仓库名/`。
 
 > 之后你只需要 `git push`，站点会自动更新。
 
