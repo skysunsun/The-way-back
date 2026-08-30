@@ -5,7 +5,7 @@
 # 部署后把 baseURL 改成你的 GitHub Pages 项目页地址，例如：
 #   baseURL = "https://your-username.github.io/blog/"
 # 若后续绑定自定义域名，则改成 "https://your-domain.com/"
-baseURL = "https://example.github.io/blog/"
+baseURL = "https://skysunsun.github.io/The-way-back/"
 title = "孙博士的教程博客"
 paginate = 8
 enableEmoji = true
@@ -14,7 +14,7 @@ enableEmoji = true
 [params]
   description = "行人过街意图预测、深度学习复现、量化交易与技术实践教程"
   author = "孙博士"
-  github = "https://github.com/your-username"   # 改成你的 GitHub 主页
+  github = "https://github.com/skysunsun"   # 改成你的 GitHub 主页
 
 # ===== 渲染设置 =====
 [markup]
