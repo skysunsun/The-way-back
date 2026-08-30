@@ -1,0 +1,6 @@
+<footer class="site-footer">
+  <div class="container">
+    <p>© {{ now.Year }} {{ .Site.Params.author }}. 使用 <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> 构建，托管于 <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>。</p>
+    {{ with .Site.Params.github }}<p><a href="{{ . }}" target="_blank" rel="noopener">GitHub 源码</a></p>{{ end }}
+  </div>
+</footer>

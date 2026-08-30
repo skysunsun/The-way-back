@@ -1,0 +1,9 @@
+<article class="post-card">
+  <div class="post-card-meta">
+    <span class="cat cat-{{ .Section }}">{{ index (dict "research" "研究" "tech" "技术" "investment" "投资") .Section }}</span>
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+  </div>
+  <h3 class="post-card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="post-summary">{{ .Summary | plainify | truncate 140 }}</p>
+  <a class="read-more" href="{{ .RelPermalink }}">阅读全文 →</a>
+</article>

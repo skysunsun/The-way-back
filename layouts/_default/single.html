@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <div class="post-card-meta">
+      <span class="cat cat-{{ .Section }}">{{ index (dict "research" "研究" "tech" "技术" "investment" "投资") .Section }}</span>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+    </div>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Params.tags }}<div class="post-tags">{{ range . }}<span class="tag">#{{ . }}</span>{{ end }}</div>{{ end }}
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

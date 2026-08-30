@@ -1,0 +1,46 @@
+# ============================================================
+#  Hugo 站点配置 —— 教程博客（研究 / 技术 / 投资）
+# ============================================================
+
+# 部署后把 baseURL 改成你的 GitHub Pages 项目页地址，例如：
+#   baseURL = "https://your-username.github.io/blog/"
+# 若后续绑定自定义域名，则改成 "https://your-domain.com/"
+baseURL = "https://example.github.io/blog/"
+title = "孙博士的教程博客"
+paginate = 8
+enableEmoji = true
+
+# ===== 自定义参数（在模板里通过 .Site.Params 读取）=====
+[params]
+  description = "行人过街意图预测、深度学习复现、量化交易与技术实践教程"
+  author = "孙博士"
+  github = "https://github.com/your-username"   # 改成你的 GitHub 主页
+
+# ===== 渲染设置 =====
+[markup]
+  # 允许在 Markdown 中书写原始 HTML（插入图表、iframe、表格等）
+  [markup.goldmark.renderer]
+    unsafe = true
+  # 代码高亮（Chroma 内置，无需外部依赖）
+  [markup.highlight]
+    style = "github"
+    noClasses = false
+
+# ===== 顶部导航菜单 =====
+[menu]
+  [[menu.main]]
+    name = "研究"
+    url = "/research/"
+    weight = 1
+  [[menu.main]]
+    name = "技术"
+    url = "/tech/"
+    weight = 2
+  [[menu.main]]
+    name = "投资"
+    url = "/investment/"
+    weight = 3
+  [[menu.main]]
+    name = "关于"
+    url = "/about/"
+    weight = 4
