@@ -37,10 +37,14 @@ enableEmoji = true
     url = "/tech/"
     weight = 2
   [[menu.main]]
+    name = "域名"
+    url = "/domain/"
+    weight = 3
+  [[menu.main]]
     name = "投资"
     url = "/investment/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "关于"
     url = "/about/"
-    weight = 4
+    weight = 5
