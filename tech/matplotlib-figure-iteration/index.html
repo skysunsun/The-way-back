@@ -1,7 +1,7 @@
-<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>matplotlib 配图迭代：从柱状图到权衡曲线 · 孙博士的教程博客</title><meta name=description content="行人过街意图预测、深度学习复现、量化交易与技术实践教程"><link rel=stylesheet href=/The-way-back/css/style.css></head><body><header class=site-header><div class="container header-inner"><a class=site-title href=https://skysunsun.github.io/The-way-back/>孙博士的教程博客</a><nav class=site-nav><a href=/The-way-back/research/>研究</a>
-<a href=/The-way-back/tech/>技术</a>
-<a href=/The-way-back/investment/>投资</a>
-<a href=/The-way-back/about/>关于</a></nav></div></header><main class=container><article class=post><header class=post-header><div class=post-card-meta><span class="cat cat-tech">技术</span>
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>matplotlib 配图迭代：从柱状图到权衡曲线 · 孙博士的教程博客</title><meta name=description content="行人过街意图预测、深度学习复现、量化交易与技术实践教程"><link rel=stylesheet href=/css/style.css></head><body><header class=site-header><div class="container header-inner"><a class=site-title href=https://sky.dpdns.org/>孙博士的教程博客</a><nav class=site-nav><a href=/research/>研究</a>
+<a href=/tech/>技术</a>
+<a href=/investment/>投资</a>
+<a href=/about/>关于</a></nav></div></header><main class=container><article class=post><header class=post-header><div class=post-card-meta><span class="cat cat-tech">技术</span>
 <time>2026-08-23</time></div><h1 class=post-title>matplotlib 配图迭代：从柱状图到权衡曲线</h1><div class=post-tags><span class=tag>#matplotlib</span><span class=tag>#可视化</span><span class=tag>#论文配图</span></div></header><div class=post-content><p>论文里的图不是一次画对的。以 AAFA 的「特征稀疏性」图为例，我们经历了
 <code>柱状图 → 雷达图 → 权衡曲线</code> 三轮迭代，才找到最能支撑 claim 的画法。
 本文把每版的代码与取舍都留下来，方便复用。</p><h2 id=第-1-版柱状图看绝对差异>第 1 版：柱状图（看绝对差异）</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>matplotlib.pyplot</span> <span class=k>as</span> <span class=nn>plt</span>
