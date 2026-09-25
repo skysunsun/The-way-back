@@ -5,9 +5,8 @@
   --border: #e4e7eb;
   --accent: #2f6f4f;
   --accent-soft: #e8f3ec;
-  --cat-research: #2f6f4f;
-  --cat-tech: #2563eb;
-  --cat-investment: #c2410c;
+  --cat-rhyme: #2f6f4f;
+  --cat-laisilu: #2563eb;
   --maxw: 820px;
 }
 
@@ -70,9 +69,8 @@ a:hover { text-decoration: underline; }
 .read-more { font-size: 14px; font-weight: 600; }
 
 .cat { display: inline-block; padding: 1px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
-.cat-research { background: var(--cat-research); }
-.cat-tech { background: var(--cat-tech); }
-.cat-investment { background: var(--cat-investment); }
+.cat-rhyme { background: var(--cat-rhyme); }
+.cat-laisilu { background: var(--cat-laisilu); }
 
 /* ===== Post (single) ===== */
 .post-header { margin: 32px 0 8px; }
