@@ -6,7 +6,7 @@
 
 <h2 class="section-title">最新文章</h2>
 <div class="post-list">
-  {{ $pages := where .Site.RegularPages "Section" "in" (slice "research" "tech" "investment") }}
+  {{ $pages := where .Site.RegularPages "Section" "in" (slice "rhyme" "laishilu") }}
   {{ range first 12 (sort $pages "Date" "desc") }}
     {{ partial "post-card.html" . }}
   {{ end }}
