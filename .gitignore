@@ -2,6 +2,7 @@
 /public/
 /resources/_gen/
 /resources/
+.hugo_build.lock
 
 # 本地 Hugo 二进制（若放在仓库目录内）
 hugo

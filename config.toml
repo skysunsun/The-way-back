@@ -1,19 +1,19 @@
 # ============================================================
-#  Hugo 站点配置 —— 惊似（历史不会重演，但总会有惊人的相似）
+#  Hugo 站点配置 —— 历总似（历史不会重演，但总会有惊人的相似）
 # ============================================================
 
 # 部署后把 baseURL 改成你的 GitHub Pages 项目页地址，例如：
 #   baseURL = "https://your-username.github.io/blog/"
 # 若后续绑定自定义域名，则改成 "https://your-domain.com/"
 baseURL = "https://sky.dpdns.org/"
-title = "惊似"
+title = "历总似"
 paginate = 8
 enableEmoji = true
 
 # ===== 自定义参数（在模板里通过 .Site.Params 读取）=====
 [params]
   description = "历史不会重演，但总会有惊人的相似——记录那些反复出现的规律、信号与套路。"
-  author = "惊似"
+  author = "历总似"
   github = "https://github.com/skysunsun"   # 改成你的 GitHub 主页
 
 # ===== 渲染设置 =====
